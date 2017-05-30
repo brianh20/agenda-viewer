@@ -1,8 +1,6 @@
 import angular from 'angular';
-import { AbsenceModule } from './absence/absence.module';
+import { DisplayModule } from './display/display.module';
 
 export const ComponentsModule = angular
-  .module('app.components', [
-    AbsenceModule
-  ])
+  .module('app.components', [DisplayModule])
   .name;

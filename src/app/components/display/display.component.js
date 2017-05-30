@@ -1,11 +1,11 @@
-import template from './absence.html';
+import template from './display.html';
 
-export const AbsenceComponent = {
+export const DisplayComponent = {
   bindings: {
       message: '<'
   },
   template,
-  controller: class AbsenceComponentController {
+  controller: class DisplayComponentController {
     constructor(ContactsService) {
     	'ngInject';
 
@@ -17,9 +17,9 @@ export const AbsenceComponent = {
     	this.results = this.Contacts
     		.get()
     		.then((response) => {
-    			console.log(response);
+    			this.contacts = response.data;
     		}, ()=> {
-    			console.log('error in component');
+    			console.log('Error resolving response');
     		});
     }
   }

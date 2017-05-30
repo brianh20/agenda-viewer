@@ -11,8 +11,6 @@ import { ContactsService } from './services/contacts.service';
 import less from '../styles/styles.less'; // eslint-disable-line
 
 export const App = angular
-  .module('app', [
-    ComponentsModule
-  ])
+  .module('app', [ComponentsModule])
   .service('ContactsService', ContactsService)
   .run();
