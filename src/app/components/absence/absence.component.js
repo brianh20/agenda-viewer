@@ -8,5 +8,9 @@ export const AbsenceComponent = {
   controller: class AbsenceComponentController {
     constructor() {
     }
+
+    $onInit() {
+    	console.log('call service');
+    }
   }
 };

@@ -1,15 +1,18 @@
+//Framework
 import angular from 'angular';
+
+//Components
 import { ComponentsModule } from './components/components.module';
 
 //Services
-//import { EmployeeSearchDataservice } from './services/employee-search.service';
+import { ContactsService } from './services/contacts.service';
 
-
+//Styles
 import less from '../styles/styles.less'; // eslint-disable-line
 
 export const App = angular
   .module('app', [
     ComponentsModule
   ])
-//  .service('EmployeeSearchDataservice', EmployeeSearchDataservice)
+  .service('ContactsService', ContactsService)
   .run();
