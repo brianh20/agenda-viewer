@@ -6,11 +6,22 @@ export const AbsenceComponent = {
   },
   template,
   controller: class AbsenceComponentController {
-    constructor() {
+    constructor(ContactsService) {
+    	'ngInject';
+
+    	this.ContactsService = ContactsService;
+    	this.Contacts = new this.ContactsService();
     }
 
     $onInit() {
-    	console.log('call service');
+    	this.results = this.Contacts
+    		.get()
+    		.then((response) => {
+    			console.log(response);
+    		}, ()=> {
+    			console.log('error in component');
+    		});
     }
   }
 };
+
