@@ -1,4 +1,4 @@
 <div class="display">
-	<contact-list></contact-list>
-	<contact-details></contact-details>
+	<contact-list ng-if="$ctrl.contacts" contacts="$ctrl.contacts" show-contact="$ctrl.displayInfo(contact)"></contact-list>
+	<contact-details contact="$ctrl.contact"></contact-details>
 </div>

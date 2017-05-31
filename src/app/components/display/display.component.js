@@ -1,9 +1,6 @@
 import template from './display.html';
 
 export const DisplayComponent = {
-  bindings: {
-      message: '<'
-  },
   template,
   controller: class DisplayComponentController {
     constructor(ContactsService) {
@@ -22,6 +19,10 @@ export const DisplayComponent = {
     		}, ()=> {
     			console.log('Error resolving response');
     		});
+    }
+
+    displayInfo(contact) {
+      this.contact = contact;
     }
   }
 };

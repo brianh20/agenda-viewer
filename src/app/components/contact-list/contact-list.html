@@ -1,3 +1,5 @@
 <div class="contact-list">
-	I'm Contact-List
+	<div ng-repeat="contact in $ctrl.contacts" ng-click="$ctrl.showDetails(contact)">
+		{{contact.name}}
+	</div>
 </div>
