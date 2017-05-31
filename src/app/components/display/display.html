@@ -1,4 +1,15 @@
 <div class="display">
-	<contact-list ng-if="$ctrl.contacts" contacts="$ctrl.contacts" show-contact="$ctrl.displayInfo(contact)"></contact-list>
-	<contact-details ng-if="$ctrl.contact" contact="$ctrl.contact"></contact-details>
+  <contact-list 
+    ng-if="$ctrl.contacts" 
+    ng-hide="$ctrl.hideList"
+    contacts="$ctrl.contacts" 
+    show-contact="$ctrl.displayInfo(contact)">
+  </contact-list>
+  <contact-details 
+    ng-if="$ctrl.contact" 
+    contact="$ctrl.contact"
+    ng-show="!$ctrl.mobileDisplay || ($ctrl.mobileDisplay && $ctrl.hideList)"
+    is-mobile="$ctrl.mobileDisplay"
+    return-list="$ctrl.showList()">
+  </contact-details>
 </div>

@@ -2,15 +2,15 @@ import template from './contact-list.html';
 
 export const ContactListComponent = {
   bindings: {
-  	contacts: '<',
-  	showContact: '&'
+    contacts: '<',
+    showContact: '&'
   },
   template,
   controller: class ContactListController {
-  	showDetails(contact, index) {
+    showDetails(contact, index) {
       this.activeContact = index;
-  		this.showContact({contact});
-  	}
+      this.showContact({contact});
+    }
 
   }
 };

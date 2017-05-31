@@ -1,4 +1,5 @@
 <div class="contact-details">
+	<div class="contact-details__goback" ng-if="$ctrl.isMobile" ng-click="$ctrl.returnToList()"> < All Contacts</div>
 	<div class="contact-details__header">
 		<div class="contact-details__header__image">
 			<img src="{{$ctrl.contact.largeImageURL}}" />
