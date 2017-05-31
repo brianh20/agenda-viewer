@@ -17,8 +17,8 @@
 			<div class="contact-details__description__phone--title">
 				Phone
 			</div>
-			<div class="contact-details__description__phone--detail">
-				{{$ctrl.contact.phone.home}}
+			<div class="contact-details__description__phone--detail" ng-repeat="(key, value) in $ctrl.contact.phone">
+				<div>{{value}}</div><span>{{key}}</span>
 			</div>
 		</div>
 
