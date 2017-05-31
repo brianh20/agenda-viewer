@@ -1,6 +1,8 @@
 <div class="contact-list">
-<div>
-	<div class="contact-list__element" ng-repeat="contact in $ctrl.contacts" ng-click="$ctrl.showDetails(contact)">
+	<div class="contact-list__element" 
+	     ng-repeat="contact in $ctrl.contacts track by $index" 
+	     ng-click="$ctrl.showDetails(contact, $index)"
+	     ng-class="{'active': $index===$ctrl.activeContact}">
 		<div class="contact-list__element__image">
 			<img src="{{contact.smallImageURL}}" />
 		</div>
@@ -9,5 +11,4 @@
 			<div class="contact-list__element__brief__phone">{{contact.phone.home}}</div>
 		</div>
 	</div>
-<div>
 </div>

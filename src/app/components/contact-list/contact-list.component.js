@@ -7,7 +7,8 @@ export const ContactListComponent = {
   },
   template,
   controller: class ContactListController {
-  	showDetails(contact) {
+  	showDetails(contact, index) {
+      this.activeContact = index;
   		this.showContact({contact});
   	}
 
