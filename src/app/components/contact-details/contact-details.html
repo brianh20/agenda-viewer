@@ -1,55 +1,55 @@
 <div class="contact-details">
-	<div class="contact-details__goback" ng-if="$ctrl.isMobile" ng-click="$ctrl.returnToList()"> < All Contacts</div>
-	<div class="contact-details__header">
-		<div class="contact-details__header__image">
-			<img src="{{$ctrl.contact.largeImageURL}}" />
-		</div>
-		<div class="contact-details__header__brief">
-			<div class="contact-details__header__brief__name">{{$ctrl.contact.name}}</div>
-			<div class="contact-details__header__brief__company">
-				<span>Company:<span><span class="contact-details__header__brief__company--name">{{$ctrl.contact.company}}</span>
-			</div>
-		</div>
-	</div>
+  <div class="contact-details__goback" ng-if="$ctrl.isMobile" ng-click="$ctrl.returnToList()"> < All Contacts</div>
+  <div class="contact-details__header">
+    <div class="contact-details__header__image">
+      <img src="{{$ctrl.contact.largeImageURL}}" />
+    </div>
+    <div class="contact-details__header__brief">
+      <div class="contact-details__header__brief__name">{{$ctrl.contact.name}}</div>
+      <div class="contact-details__header__brief__company">
+        <span>Company:<span><span class="contact-details__header__brief__company--name">{{$ctrl.contact.company}}</span>
+      </div>
+    </div>
+  </div>
 
-	<div class="contact-details__description">
+  <div class="contact-details__description">
 
-		<div class="contact-details__description__phone">
-			<div class="contact-details__description__phone--title">
-				Phone
-			</div>
-			<div class="contact-details__description__phone--detail" ng-repeat="(key, value) in $ctrl.contact.phone">
-				<div>{{value}}</div><span>{{key}}</span>
-			</div>
-		</div>
+    <div class="contact-details__description__phone">
+      <div class="contact-details__description__phone--title">
+        Phone
+      </div>
+      <div class="contact-details__description__phone--detail" ng-repeat="(key, value) in $ctrl.contact.phone">
+        <div>{{value}}</div><span>{{key}}</span>
+      </div>
+    </div>
 
-		<div class="contact-details__description__address">
-			<div class="contact-details__description__address--title">
-				Address
-			</div>
-			<div class="contact-details__description__address--detail">
-				{{$ctrl.contact.address.street}}<br/>
-				{{$ctrl.contact.address.city}}, {{$ctrl.contact.address.state}}<br/>
-				{{$ctrl.contact.address.country}}
-			</div>
-		</div>
-		
-		<div class="contact-details__description__birthday">
-			<div class="contact-details__description__birthday--title">
-				Birthday
-			</div>
-			<div class="contact-details__description__birthday--detail">
-				{{$ctrl.contact.birthdate | date: 'longDate'}}
-			</div>
-		</div>
-		
-		<div class="contact-details__description__email">
-			<div class="contact-details__description__email--title">
-				Email
-			</div>
-			<div class="contact-details__description__email--detail">
-				{{$ctrl.contact.email}}
-			</div>
-		</div>
-	</div>
+    <div class="contact-details__description__address">
+      <div class="contact-details__description__address--title">
+        Address
+      </div>
+      <div class="contact-details__description__address--detail">
+        {{$ctrl.contact.address.street}}<br/>
+        {{$ctrl.contact.address.city}}, {{$ctrl.contact.address.state}}<br/>
+        {{$ctrl.contact.address.country}}
+      </div>
+    </div>
+    
+    <div class="contact-details__description__birthday">
+      <div class="contact-details__description__birthday--title">
+        Birthday
+      </div>
+      <div class="contact-details__description__birthday--detail">
+        {{$ctrl.contact.birthdate | date: 'longDate'}}
+      </div>
+    </div>
+    
+    <div class="contact-details__description__email">
+      <div class="contact-details__description__email--title">
+        Email
+      </div>
+      <div class="contact-details__description__email--detail">
+        {{$ctrl.contact.email}}
+      </div>
+    </div>
+  </div>
 </div>

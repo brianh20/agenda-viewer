@@ -2,8 +2,10 @@
   <contact-list 
     ng-if="$ctrl.contacts" 
     ng-hide="$ctrl.hideList"
-    contacts="$ctrl.contacts" 
-    show-contact="$ctrl.displayInfo(contact)">
+    contacts="$ctrl.contacts"
+    is-mobile="$ctrl.mobileDisplay"
+    show-contact="$ctrl.displayInfo(contact)"
+    ng-class="{'fullwidth' : $ctrl.mobileDisplay}">
   </contact-list>
   <contact-details 
     ng-if="$ctrl.contact" 
