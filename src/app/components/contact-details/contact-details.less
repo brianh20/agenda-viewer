@@ -1,5 +1,6 @@
 .contact-details {
-	margin: 5%;
+	margin: 24px;
+
 	&__header{
 		width: 100%;
 		display: flex;
@@ -7,24 +8,56 @@
 		&__image{
 		}
 		&__brief{
+			margin-left: 20px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+
 			&__name{
 				font-weight: bold;
-				font-size: large;
+				font-size: larger;
+
 			}
 			&__company{
+				span{
+					display: grid;
+				}
+
 				&--name{
 					font-weight: bold;
-					font-size: large;		
+					font-size: larger;		
 				}
 			}
 		}
 	}
 
 	&__description {
-		&__phone{}
-		&__address{}
-		&__birthday{}
-		&__email{}
+		margin-top: 20px;
+
+		&__phone{
+			&--title{}
+			&--detail{
+				font-weight: bold;
+			}
+		}
+		&__address{
+			&--title{}
+			&--detail{
+				font-weight: bold;
+			}
+		}
+		&__birthday{
+			&--title{}
+			&--detail{
+				font-weight: bold;
+			}
+		}
+		&__email{
+			&--title{}
+			&--detail{
+				font-weight: bold;
+			}
+		}
 	}
 }
 

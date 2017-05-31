@@ -6,18 +6,49 @@
 		<div class="contact-details__header__brief">
 			<div class="contact-details__header__brief__name">{{$ctrl.contact.name}}</div>
 			<div class="contact-details__header__brief__company">
-				Company: <span class="contact-details__header__brief__company--name">{{$ctrl.contact.company}}</span>
+				<span>Company:<span><span class="contact-details__header__brief__company--name">{{$ctrl.contact.company}}</span>
 			</div>
 		</div>
 	</div>
 
 	<div class="contact-details__description">
-		<div class="contact-details__description__phone">Phone: {{$ctrl.contact.phone.home}}</div>
 
-		<div class="contact-details__description__address">Address: {{$ctrl.contact.address}}</div>
+		<div class="contact-details__description__phone">
+			<div class="contact-details__description__phone--title">
+				Phone
+			</div>
+			<div class="contact-details__description__phone--detail">
+				{{$ctrl.contact.phone.home}}
+			</div>
+		</div>
+
+		<div class="contact-details__description__address">
+			<div class="contact-details__description__address--title">
+				Address
+			</div>
+			<div class="contact-details__description__address--detail">
+				{{$ctrl.contact.address.street}}<br/>
+				{{$ctrl.contact.address.city}}, {{$ctrl.contact.address.state}}<br/>
+				{{$ctrl.contact.address.country}}
+			</div>
+		</div>
 		
-		<div class="contact-details__description__birthday">Birthday: {{$ctrl.contact.birthday}}</div>
+		<div class="contact-details__description__birthday">
+			<div class="contact-details__description__birthday--title">
+				Birthday
+			</div>
+			<div class="contact-details__description__birthday--detail">
+				{{$ctrl.contact.birthdate | date: 'longDate'}}
+			</div>
+		</div>
 		
-		<div class="contact-details__description__email">Email: {{$ctrl.contact.email}}</div>
+		<div class="contact-details__description__email">
+			<div class="contact-details__description__email--title">
+				Email
+			</div>
+			<div class="contact-details__description__email--detail">
+				{{$ctrl.contact.email}}
+			</div>
+		</div>
 	</div>
 </div>
