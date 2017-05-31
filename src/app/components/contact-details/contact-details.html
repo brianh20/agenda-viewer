@@ -1,8 +1,17 @@
 <div class="contact-details">
-	<div class="contact-details__name">Name: {{$ctrl.contact.name}}</div>
-	<div class="contact-details__company">Company: {{$ctrl.contact.company}}</div>
-	<div class="contact-details__phone">Phone: {{$ctrl.contact.phone}}</div>
-	<div class="contact-details__address">Address: {{$ctrl.contact.address}}</div>
-	<div class="contact-details__birthday">Birthday: {{$ctrl.contact.birthday}}</div>
-	<div class="contact-details__email">Email: {{$ctrl.contact.email}}</div>
+	<div class="contact-details__header">
+		<div class="contact-details__header__image">
+			<img src="{{$ctrl.contact.largeImageURL}}" />
+		</div>
+		<div class="contact-details__header__brief">
+			<div class="contact-details__header__brief__name">Name: {{$ctrl.contact.name}}</div>
+			<div class="contact-details__header__brief__company">Company: {{$ctrl.contact.company}}</div>
+	</div>
+	
+	<div class="contact-details__description">
+		<div class="contact-details__description__phone">Phone: {{$ctrl.contact.phone}}</div>
+		<div class="contact-details__description__address">Address: {{$ctrl.contact.address}}</div>
+		<div class="contact-details__description__birthday">Birthday: {{$ctrl.contact.birthday}}</div>
+		<div class="contact-details__description__email">Email: {{$ctrl.contact.email}}</div>
+	</div>
 </div>

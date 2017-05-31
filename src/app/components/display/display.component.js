@@ -14,7 +14,6 @@ export const DisplayComponent = {
     	this.results = this.Contacts
     		.get()
     		.then((response) => {
-          console.log(response);
     			this.contacts = response.data;
     		}, ()=> {
     			console.log('Error resolving response');
