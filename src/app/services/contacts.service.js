@@ -2,7 +2,8 @@ export const ContactsService = function ($http) {
   class ContactsModel {
     get() {
       return $http({
-        url: 'https://s3.amazonaws.com/technical-challenge/Contacts_v2.json',
+        //url: 'https://s3.amazonaws.com/technical-challenge/Contacts_v2.json',
+        url: '../../mock/contacts.json',
         method: 'GET'
       }).then((res) => {
         // Return response
